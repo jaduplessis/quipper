@@ -20,7 +20,7 @@ export class AI {
     this.imageModel = new ImageAI(AI.getApiKey(), {
       model: "dall-e-3",
       n: 1,
-      size: "512x512",
+      size: "1024x1024",
       response_format: "url",
     });
   }
