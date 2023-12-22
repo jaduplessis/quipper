@@ -1,8 +1,8 @@
-import { AI } from "./ai";
+import { AI, ImageResult } from "./ai";
 
 export const generateImage = async (
   quote: string,
-): Promise<Buffer> => {
+): Promise<ImageResult> => {
   const model = new AI();
 
   return await model.generateImage(quote);

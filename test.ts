@@ -3,4 +3,6 @@ import { generateImage } from "./src";
 
 dotenv.config();
 
-const image = await generateImage("I haven't had a shower in 3 days");
+const { image, prompt } = await generateImage(
+  "I haven't had a shower in 3 days"
+);

@@ -3,6 +3,11 @@ import { HumanMessage, SystemMessage } from "langchain/schema";
 import { ImageAI } from "./imageai";
 import { dalleImagePrompt } from "./prompt";
 
+export interface ImageResult {
+  image: Buffer;
+  prompt: string;
+}
+
 export class AI {
   private promptModel: ChatOpenAI;
   private imageModel: ImageAI;
@@ -40,9 +45,11 @@ export class AI {
     return res.content as string;
   }
 
-  public async generateImage(quote: string): Promise<Buffer> {
+  public async generateImage(quote: string): Promise<ImageResult> {
     const prompt = await this.getImagePrompt(quote);
 
-    return await this.imageModel.generateImage(prompt);
+    const image = await this.imageModel.generateImage(prompt);
+
+    return { image, prompt };
   }
 }
