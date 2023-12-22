@@ -14,8 +14,7 @@ export class AI {
   constructor() {
     this.promptModel = new ChatOpenAI({
       openAIApiKey: AI.getApiKey(),
-      modelName: "gpt-3.5-turbo",
-      maxTokens: 15,
+      modelName: "gpt-4",
     });
     this.imageModel = new ImageAI(AI.getApiKey(), {
       model: "dall-e-3",
