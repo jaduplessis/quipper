@@ -1,6 +1,6 @@
 {
   "name": "quipper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "quipper is a simple wrapper for the OpenAI API that makes it easy to generate inventive images from a quote.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

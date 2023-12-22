@@ -15,10 +15,9 @@ export class AI {
     this.promptModel = new ChatOpenAI({
       openAIApiKey: AI.getApiKey(),
       modelName: "gpt-3.5-turbo",
+      maxTokens: 15,
     });
-    this.imageModel = new ImageAI(
-      AI.getApiKey(),
-      {
+    this.imageModel = new ImageAI(AI.getApiKey(), {
       model: "dall-e-3",
       n: 1,
       size: "1024x1024",
