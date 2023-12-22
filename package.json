@@ -1,0 +1,42 @@
+{
+  "name": "quipper",
+  "version": "0.0.1",
+  "description": "quipper is a simple wrapper for the OpenAI API that makes it easy to generate inventive images from a quote.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "ts-node test.ts",
+    "build": "tsc",
+    "publish-package": "pnpm build && pnpm publish --access public"
+  },
+  "author": "Andre du Plessis",
+  "license": "MIT",
+  "keywords": [
+    "translate",
+    "chatgpt",
+    "gpt",
+    "gpt3",
+    "openai",
+    "gpt4",
+    "vertexai",
+    "huggingface",
+    "ai",
+    "genai",
+    "llama",
+    "gemini"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "langchain": "^0.0.210",
+    "openai": "^4.24.0"
+  }
+}
